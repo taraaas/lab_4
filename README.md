@@ -1,16 +1,29 @@
-# React + Vite
+# lab_4
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![CI/CD Pipeline](https://github.com/taraaas/lab_4/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/taraaas/lab_4/actions/workflows/ci-cd.yml)
 
-Currently, two official plugins are available:
+Лабораторна робота №4 з теми **CI/CD**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Проєкт
+У цій роботі налаштовано:
+- GitHub Actions workflow для автоматичної перевірки коду
+- lint перевірку
+- unit tests
+- build проєкту
+- автоматичний деплой на Vercel
+- quality gate для гілки `main`
 
-## React Compiler
+## Production URL
+lab-4-880spbn6h-taraaas-projects.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Workflow
+Pipeline запускається автоматично при:
+- `push` у гілки `main` та `develop`
+- `pull_request` у гілки `main` та `develop`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Використані команди
+```bash
+npm install
+npm run lint
+npm run test:unit
+npm run build
